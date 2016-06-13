@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Bootstrap Blog Template">
+    <meta name="author" content="Vijaya Anand">
+
+    <title>Блог на Symfony</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Bootstrap CSS file -->
+    <link href="/bundles/blog/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="/bundles/blog/css/blog.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<!-- Header -->
+{{ include('BlogBundle::Blocks/navbar.html.twig') }}
+
+<!-- Body -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+
+            {% block body %}{% endblock %}
+
+        </div>
+        <div class="col-md-4">
+
+            {{ include('BlogBundle::Blocks/subscribe.html.twig') }}
+
+            {{ include('BlogBundle::Blocks/latest_posts.html.twig') }}
+
+            {{ include('BlogBundle::Blocks/categories.html.twig') }}
+
+            {{ include('BlogBundle::Blocks/tags.html.twig') }}
+
+            {{ include('BlogBundle::Blocks/recent_comments.html.twig') }}
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <hr />
+        <p class="text-center">Copyright &copy; PhpAcademy 2016. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Jquery and Bootstrap Script files -->
+<script src="/bundles/blog/js/jquery.min.js"></script>
+<script src="/bundles/blog/js/bootstrap.min.js"></script>
+</body>
+</html>

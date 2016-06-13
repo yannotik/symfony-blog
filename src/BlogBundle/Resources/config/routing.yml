@@ -1,0 +1,27 @@
+list:
+    path:     /
+    defaults: { _controller: BlogBundle:Post:list }
+
+post:
+    path:     /post/{id}
+    defaults: { _controller: BlogBundle:Post:post }
+
+register:
+    path:     /register
+    defaults: { _controller: BlogBundle:User:register }
+
+login:
+    path:     /login
+    defaults: { _controller: BlogBundle:User:login }
+
+logout:
+    path:     /logout
+    defaults: { _controller: BlogBundle:User:logout }
+
+logout:
+    path:     /logout
+    defaults: { _controller: BlogBundle:User:logout }
+
+about:
+    path:     /about
+    defaults: { _controller: BlogBundle:Blocks:about }
